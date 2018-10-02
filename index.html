@@ -119,7 +119,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="slider-captions">
                                     <h1 class="slider-title">Up Close And Personal</h1>
-                                    <a href="#" class="btn btn-primary">Book Now</a>
+                                    <a id="book-btn" href="#" class="btn btn-primary">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -729,6 +729,26 @@
         <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+              emailjs.init("user_bg99wJyVu6TqX2kHlru3p");
+           })();
+        </script>        
+        <script type="text/javascript">
+            document.getElementById("book-btn").addEventListener("click", function(e) {
+                var template_params = {
+                   "reply_to": "afree1423@gmail.com",
+                   "from_name": "test name",
+                   "to_name": "to name",
+                   "message_html": "<h1> email header</h1><p>email p</p>"
+                }
+
+                var service_id = "default_service";
+                var template_id = "template_fKBszAbL";
+                emailjs.send(service_id,template_id,template_params);
+            });
+        </script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/menumaker.js"></script>
