@@ -1,12 +1,36 @@
 @charset "UTF-8";
-div.header {
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*div.header {
   display: none;
+}*/
+.top-header .container {
+  margin-left: 0px;
+}
+.slider-captions.slide1 {
+    bottom: 160px !important;
+    right: 20px !important;
+}
+.slider-captions.slide2 {
+    right: 10px !important;
+}
+.slider-captions.slide3 {
+    bottom: 100px !important;
 }
 .topLogo {
       margin-top: 3px;
 }
 .tiny-footer {
   display:none;
+}
+.top-header {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    width: 100%;
+}
+.container {
+  padding-left: 0px !important;
 }
 /* CSS Document */
 
@@ -92,9 +116,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    1. Body / Typography
 ----------------------------------*/
 
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Merriweather Sans', sans-serif; letter-spacing: 0px; font-size: 14px; color: #36333c; font-weight: 400; line-height: 26px; }
-.wrapper { margin: 0px 41px 41px 41px; }
-h1, h2, h3, h4, h5, h6 { letter-spacing: 0px; font-weight: 300; color: #1c1e22; margin: 0px 0px 15px 0px; font-family: 'Merriweather Sans', sans-serif; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Lato', sans-serif; letter-spacing: 0px; font-size: 14px; color: #36333c; font-weight: 400; line-height: 26px; }
+.wrapper { margin: 70px 41px 41px 41px; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: 0px; font-weight: 300; color: #1c1e22; margin: 0px 0px 15px 0px; font-family: 'Lato', sans-serif; }
 h1 { font-size: 40px; }
 h2 { font-size: 34px; }
 h3 { font-size: 24px; font-weight: 400; }
@@ -107,13 +131,13 @@ ul, ol { }
 a { text-decoration: none; color: #121113; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #69481f; }
 sub { bottom: 0em; }
-.lead { font-size: 21px; font-weight: 300; line-height: 1.6; font-family: 'Merriweather Sans', sans-serif; color: #36333c; margin-bottom: 20px; }
+.lead { font-size: 21px; font-weight: 300; line-height: 1.6; font-family: 'Lato', sans-serif; color: #36333c; margin-bottom: 20px; }
 .firstcharacter { float: left; font-size: 95px; line-height: 60px; padding-top: 16px; padding-right: 8px; padding-left: 0px; color: #121113; }
 blockquote { padding: 30px; margin: 0 0 30px; font-size: 18px; border: 2px solid #edd818; background-color: transparent; font-weight: 300; color: #121113; line-height: 28px; }
 .blockquote-reverse, blockquote.pull-right { border: 2px solid #edd818; padding: 30px; margin: 0 0 30px; font-size: 18px; }
 .qoute-icon { }
 .blockquote-content { }
-.blockquote-text { font-family: 'Merriweather Sans', sans-serif; color: #525756; font-weight: 400; font-size: 23px; line-height: 1.6; }
+.blockquote-text { font-family: 'Lato', sans-serif; color: #525756; font-weight: 400; font-size: 23px; line-height: 1.6; }
 strong { color: #2e3139; font-weight: 700; }
 hr { border-top: 1px solid #eee; margin-bottom: 40px; margin-top: 40px; }
 .list-none { list-style: none; padding: 0; }
@@ -152,7 +176,7 @@ select { width: 100%; height: 100%; margin: 0; padding: 0 0 0 .5em; cursor: poin
 .select::after { position: absolute; top: 0; right: 0; bottom: 0; padding: 10px 17px 0px 0px; background: transparent; pointer-events: none; font-family: FontAwesome; content: "\f107"; font-size: 16px; }
 .select:hover::after { color: #023981; }
 .select::after { -webkit-transition: .25s all ease; -o-transition: .25s all ease; transition: .25s all ease; }
-select option { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor: pointer; padding: 10px; width: 100%; background-color: #fff; font-family: 'Merriweather Sans', sans-serif; }
+select option { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor: pointer; padding: 10px; width: 100%; background-color: #fff; font-family: 'Lato', sans-serif; }
 .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 #datepicker { }
 .default-skin .ui-widget-header { border: 1px solid #e4e7e9; background: #f3f6f8; color: #fff; font-weight: bold; }
@@ -191,7 +215,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 /*-----------------------------------
    3. Buttons 
 -----------------------------------*/
-.btn { font-family: 'Merriweather Sans', sans-serif; font-size: 16px; text-transform: capitalize; font-weight: 700; padding: 14px 40px; letter-spacing: 0px; border-radius: 50px; line-height: 2; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; word-wrap: break-word; white-space: normal !important; }
+.btn { font-family: 'Lato', sans-serif; font-size: 16px; text-transform: capitalize; font-weight: 700; padding: 14px 40px; letter-spacing: 0px; border-radius: 50px; line-height: 2; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; word-wrap: break-word; white-space: normal !important; }
 .btn-primary { background-color: #fcd55a; color: #121113; border: 2px solid #fcd55a; }
 .btn-primary:hover { background-color: #efbf25; color: #121113; border: 2px solid #efbf25; }
 .btn-primary.focus, .btn-primary:focus { background-color: #efbf25; color: #121113; border: 2px solid #efbf25; box-shadow: 0 0 0 0.2rem rgba(239, 191, 37, .5); color: #121113; }
@@ -313,7 +337,12 @@ button.btn { margin-right: -1px; }
 .bg-light { background-color: #fffcf7 !important; }
 .bg-line { background-color: #fff; border: 60px solid #e9ebef; padding-top: 80px; padding-bottom: 80px; }
 .bg-primary { background-color: #ffcd00; }
-.bg-default { background-color: #69481f; }
+.bg-default { 
+  /*background-color: #69481f;*/
+  border: 1px solid black;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 .bg-white { }
 .bg-gradient { }
 .outline { }
@@ -408,8 +437,8 @@ button.btn { margin-right: -1px; }
 ----------------------------------*/
 img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border: none; line-height: normal; vertical-align: middle; }
 .imghover { display: block; position: relative; max-width: 100%; }
-.imghover::before, .imghover::after { display: block; position: absolute; content: ""; text-align: center; opacity: 0; border-radius: 6px; }
-.imghover::before { top: 0; right: 0; bottom: 0; left: 0; }
+/*.imghover::before, .imghover::after { display: block; position: absolute; content: ""; text-align: center; opacity: 0; border-radius: 6px; }
+.imghover::before { top: 0; right: 0; bottom: 0; left: 0; }*/
 .imghover::after { top: 50%; left: 50%; padding: 10px; line-height: 10px; margin: -25px 0 0 -25px; content: ""; font-family: "FontAwesome"; font-size: 30px; }
 .imghover:hover::before, .imghover:hover::after { opacity: 1; }
 .imghover:hover::before { background: rgba(61, 15, 130, .70); }
@@ -452,7 +481,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 #navigation, #navigation ul, #navigation ul li, #navigation ul li a, #navigation #menu-button { margin: 0; padding: 0; border: 0; list-style: none; line-height: 1; display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 #navigation:after, #navigation>ul:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 #navigation #menu-button { display: none; }
-#navigation { font-family: 'Merriweather Sans', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+#navigation { font-family: 'Lato', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 #navigation>ul>li { float: left; }
 #navigation.align-center>ul { font-size: 0; text-align: center; }
 #navigation.align-center>ul>li { display: inline-block; float: none; }
@@ -632,9 +661,9 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 ---------------------------*/
 
 /*.tour-block { padding-top: 70px; }*/
-.tour-content { }
+.tour-content { padding-top: 20px; }
 .tour-meta { }
-.tour-img { }
+.tour-img { width: 400px; }
 .tour-img img { border-radius: 6px; width: 100%; }
 
 /*-------------------------
